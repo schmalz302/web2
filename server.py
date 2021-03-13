@@ -2,16 +2,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-aa = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач',
-      'инженер по терраформированию', 'климатолог', 'специалист по радиационной защите', 'астрогеолог',
-      'гляциолог', 'инженер жизнеобеспечения', 'метеоролог', 'оператор марсохода', 'киберинженер',
-      'штурман', 'пилот дронов']
 
-
-@app.route('/list_prof/<list>')
-def index(list):
-    return render_template('специальность.html',
-                           a=list, aa=aa)
+@app.route('/index/<a>')
+def index(a):
+    return render_template('base.html',
+                           a=a)
 
 
 if __name__ == '__main__':
