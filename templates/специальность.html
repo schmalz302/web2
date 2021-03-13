@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Список профессий</h2>
+    {% if a == 'ol' %}
+        {% for i in aa%}
+            <div>{{ loop.index }}.{{ i }}</div>
+        {% endfor %}
+    {% elif a == 'ul' %}
+        {% for i in aa%}
+            <li>{{ i }}</li>
+        {% endfor %}
+    {% else %}
+    {% endif %}
+{% endblock %}
