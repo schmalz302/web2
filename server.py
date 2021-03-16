@@ -1,12 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
 
-@app.route('/index/<a>')
-def index(a):
-    return render_template('base.html',
-                           a=a)
+@app.route('/training/<prof>')
+def index(prof):
+    return render_template('специальность.html',
+                           a=prof)
 
 
 if __name__ == '__main__':

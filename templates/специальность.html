@@ -1,15 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Список профессий</h2>
-    {% if a == 'ol' %}
-        {% for i in aa%}
-            <div>{{ loop.index }}.{{ i }}</div>
-        {% endfor %}
-    {% elif a == 'ul' %}
-        {% for i in aa%}
-            <li>{{ i }}</li>
-        {% endfor %}
+    {% if 'инженер' in a or 'строитель' in a %}
+        <h2>Инженерные тренажеры</h2>
+        <img src="/static/img/2.png" alt="здесь должна была быть картинка, но не нашлась">
     {% else %}
+        <h2>Научные симуляторы</h2>
+        <img src="/static/img/1.png" alt="здесь должна была быть картинка, но не нашлась">
     {% endif %}
 {% endblock %}
